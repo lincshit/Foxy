@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watch Room | Create Your Streaming Room</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Free cloud-ready experience</p>
+        <h1>Watch Room</h1>
+        <p>Create a room, choose what to watch, and share a Netflix-style watch screen with friends.</p>
+      </div>
+      <div class="hero-badge">Static site • No backend required • Deploy to Netlify, Vercel, or GitHub Pages</div>
+    </header>
+
+    <main>
+      <section class="panel panel-form">
+        <h2>Create a Room</h2>
+        <form id="room-form">
+          <label>
+            Room Name
+            <input type="text" id="room-name" placeholder="e.g. Chill Movie Night" required />
+          </label>
+          <label>
+            What do you want to watch?
+            <input type="text" id="watch-title" placeholder="e.g. Neon Hearts" required />
+          </label>
+          <label>
+            Content Type
+            <select id="content-type">
+              <option>Movie</option>
+              <option>Series</option>
+              <option>Anime</option>
+              <option>Cartoon</option>
+              <option>Animation</option>
+            </select>
+          </label>
+          <label>
+            Creator Name
+            <input type="text" id="creator-name" placeholder="Optional" />
+          </label>
+          <button type="submit" class="primary-btn">Create Room</button>
+        </form>
+        <div class="note">
+          Tip: pick a title, create the room, then join it to see the shared watch screen.
+        </div>
+      </section>
+
+      <section class="panel panel-suggestions">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">Popular picks</p>
+            <h2>Choose a ready-made watch title</h2>
+          </div>
+        </div>
+        <div class="suggestion-grid" id="suggestions"></div>
+      </section>
+
+      <section class="panel panel-room hidden" id="room-view">
+        <div class="room-header">
+          <div>
+            <p class="eyebrow">Room created</p>
+            <h2 id="room-title"></h2>
+            <p class="room-meta" id="room-meta"></p>
+          </div>
+          <button id="join-room-btn" class="secondary-btn">Join room</button>
+        </div>
+
+        <div class="watch-layout">
+          <div class="watch-card">
+            <div class="watch-label">Now watching</div>
+            <div class="watch-title" id="watch-heading"></div>
+            <div class="watch-subtitle" id="watch-subtitle"></div>
+            <div class="watch-banner" id="watch-banner"></div>
+          </div>
+
+          <div class="player-panel">
+            <div class="player-top">
+              <div>
+                <p class="eyebrow">Shared playback screen</p>
+                <p id="player-status">Room is ready. Press play to preview.</p>
+              </div>
+              <button id="toggle-play" class="primary-btn">Play Preview</button>
+            </div>
+            <div class="player-frame">
+              <video id="preview-video" controls preload="metadata" poster="" hidden>
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4" />
+                Your browser does not support video playback.
+              </video>
+              <div class="player-placeholder" id="player-placeholder">
+                <span class="player-icon">▶</span>
+                <p>Movie, anime, or animation appears here when the room is live.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
