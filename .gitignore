@@ -1,0 +1,4 @@
+# Ignore local Node extraction and temporary artifacts
+nodejs/
+*.zip
+.DS_Store

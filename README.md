@@ -17,17 +17,14 @@ A minimal static watch-room app built for free cloud hosting.
 
 ## Deployment
 
-You can deploy this folder to any static host:
-
-- GitHub Pages
-- Netlify
-- Vercel
+This app is ready for GitHub Pages.
 
 ### To deploy manually
 
 1. Push this folder to a GitHub repository.
-2. Configure GitHub Pages or connect the repo from Netlify/Vercel.
-3. Use the default `index.html` entry point.
+2. Enable GitHub Pages in the repository settings.
+3. Set the source to GitHub Actions.
+4. The included workflow will publish the app automatically.
 
 ## Local preview
 
