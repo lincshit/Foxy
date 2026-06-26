@@ -33,6 +33,18 @@ You can deploy this folder to any static host:
 
 Open `index.html` in your browser to try the app locally.
 
+## Deploy via GitHub and Vercel
+
+1. Create a GitHub repository and push this folder there.
+
+```bash
+git remote add origin https://github.com/<your-user>/<your-repo>.git
+git push -u origin master
+```
+
+2. Open https://vercel.com and import the repository.
+3. Vercel will detect the static app and deploy it automatically.
+
 ## Notes
 
 This is a static front-end prototype. It does not include server-side streaming or real video hosting, but the UI is ready for free cloud deployment and demonstrates the room/selection workflow.
